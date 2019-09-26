@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Validator;
 
 class ProductController extends Controller
 {
@@ -27,7 +28,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $validate = Validator::make($request->all(),[
-            'name' => 'required',
+            'name' => 'required|unique:products',
             'description' => 'required',
         ]);
 
@@ -44,9 +45,9 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        return response()->json(Product::find($id), 200);
     }
 
     /**
@@ -56,9 +57,12 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $product->update($request->all());
+
+        return response()->json(['message' => 'Actualizado correctamente.'], 200);
     }
 
     /**
@@ -67,8 +71,12 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        $product->delete();
+
+        return response()->json(['message' => 'Borrado correctamente.'], 200);
+
     }
 }

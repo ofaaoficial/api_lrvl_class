@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "3e418f70-1649-4ff3-ad76-33f0c681d4bf",
+		"name": "api_lrvl_class",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - METHOD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api_lrvl/public/api/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_lrvl",
+						"public",
+						"api",
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - METHOD - FAILED",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api_lrvl/public/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_lrvl",
+						"public",
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - METHOD ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"product save\",\n\t\"description\" : \"description save\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api_lrvl/public/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_lrvl",
+						"public",
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - METHOD - SHOW",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api_lrvl/public/api/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_lrvl",
+						"public",
+						"api",
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - METHOD",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api_lrvl/public/api/productos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_lrvl",
+						"public",
+						"api",
+						"productos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
