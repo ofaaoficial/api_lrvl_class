@@ -1,10 +1,9 @@
 ## 🔥 Formación a aprendices del Centro de electricidad, electrónica y telecomunicaciones SENA CEET
 
-[Laravel 6]( https://laravel.com/docs/6.x).
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 
-Introducción al framework Laravel y a las [API REST]( https://www.idento.es/blog/desarrollo-web/que-es-una-api-rest/).
+Introducción al framework [Laravel 6]( https://laravel.com/docs/6.x) y a las [API REST]( https://www.idento.es/blog/desarrollo-web/que-es-una-api-rest/).
 
 
 ## 📐 Temas tratados
